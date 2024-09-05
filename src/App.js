@@ -9,9 +9,9 @@ import Home from './components/home/Home';
 
 function App() {
   
-  const [movies, setMovies] = useState();
+  const [users, setUsers] = useState();
 
-  const getMovies = async () =>{
+  const getUsers = async () =>{
     
     try{
 
@@ -22,7 +22,7 @@ function App() {
 
       console.log(response.data);
 
-      setMovies(response.data);
+      setUsers(response.data);
 
     } catch(err){
       console.log(err);
@@ -32,7 +32,7 @@ function App() {
   }
 
   useEffect(() => {
-    getMovies();
+    getUsers();
   },[])
   
   return (
